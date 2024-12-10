@@ -126,7 +126,8 @@
 
 <body>
   <h1>Anh có điều muốn nói</h1>
-  <button onclick="playYouTubeAudio()">Nhấn đây nè</button>
+  <button onclick="playYouTubeAudio(); generateRandomNotifications()">Nhấn đây nè</button>
+  
 
   <!-- Div chứa iframe YouTube -->
   <div id="player"></div>
@@ -146,7 +147,7 @@
       player = new YT.Player('player', {
         height: '0',
         width: '0',
-        videoId: 'M7lc1UVf-VE',  // ID của video YouTube mà bạn muốn phát (thay thế bằng ID video của bạn)
+        videoId: 'qRuSS93OEfw', https: // ID của video YouTube mà bạn muốn phát (thay thế bằng ID video của bạn)
         events: {
           'onReady': onPlayerReady,
         }
