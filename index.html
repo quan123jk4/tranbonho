@@ -126,44 +126,9 @@
 
 <body>
   <h1>Anh có điều muốn nói</h1>
-  <button onclick="playYouTubeAudio(); generateRandomNotifications()">Nhấn đây nè</button>
-  
-
-  <!-- Div chứa iframe YouTube -->
-  <div id="player"></div>
+  <button onclick="generateRandomNotifications()">Nhấn đây nè</button>
 
   <script>
-    // 1. Tải YouTube API
-    var tag = document.createElement('script');
-    tag.src = "https://www.youtube.com/iframe_api";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-    // 2. Tạo biến player
-    var player;
-
-    // 3. Chạy khi API được tải xong
-    function onYouTubeIframeAPIReady() {
-      player = new YT.Player('player', {
-        height: '0',
-        width: '0',
-        videoId: 'qRuSS93OEfw', https: // ID của video YouTube mà bạn muốn phát (thay thế bằng ID video của bạn)
-        events: {
-          'onReady': onPlayerReady,
-        }
-      });
-    }
-
-    // 4. Phát video khi nhấn nút
-    function playYouTubeAudio() {
-      player.playVideo();
-    }
-
-    // 5. Lắng nghe sự kiện khi video đã sẵn sàng
-    function onPlayerReady(event) {
-      event.target.playVideo();
-    }
-
     const messages = ["Nhớ nhớ nhớ em!"];
 
     function generateRandomNotifications() {
